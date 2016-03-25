@@ -1,0 +1,27 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: CrankWheelPulser - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\BRUCE\LOCALS~1\Temp\RSP165.tmp" with contents
+[
+Winmm.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/CrankWheelPulser.pdb" /machine:I386 /out:"Release/CrankWheelPulser.exe" 
+".\Release\CrankWheelPulser.obj"
+".\Release\CrankWheelPulserDlg.obj"
+".\Release\StdAfx.obj"
+".\Release\CrankWheelPulser.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\BRUCE\LOCALS~1\Temp\RSP165.tmp"
+<h3>Output Window</h3>
+Linking...
+
+
+
+<h3>Results</h3>
+CrankWheelPulser.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

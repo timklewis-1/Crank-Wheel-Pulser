@@ -1,0 +1,255 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\CrankWheelPulser.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\CrankWheelPulser.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 169
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About CrankWheelPulser"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,21,17,20,20
+    LTEXT           "CrankWheelPulser Version 1.001",IDC_STATIC,61,14,119,8,
+                    SS_NOPREFIX
+    DEFPUSHBUTTON   "OK",IDOK,89,139,50,14,WS_GROUP
+    LTEXT           "(C) 2005, 2006 Bowling & Grippo",IDC_STATIC,61,30,119,8,
+                    SS_NOPREFIX
+    LTEXT           "This progran uses a PC sound card and an audio transformer to produce a AC signal for MegaSquirt (or other ECUs), mimicing a VR sensor.",
+                    IDC_STATIC,17,51,202,28
+    LTEXT           "See: http://www.megasquirt.info/router/crankwheelpulser.htm for more info.",
+                    IDC_STATIC,17,114,202,23
+    LTEXT           "The wheel must have at least as many teeth as ignition events per revolution, and the missing teeth cannot be one of the trigger teeth. Common configurations are 12-1, 36-1, and 60-2.",
+                    IDC_STATIC,16,82,202,28
+END
+
+IDD_CRANKWHEELPULSER_DIALOG DIALOGEX 0, 0, 351, 350
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "CrankWheelPulser V1.001 by Bowling & Grippo"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Exit",IDOK,95,315,50,14
+    GROUPBOX        "",IDC_STATIC,7,3,337,45
+    GROUPBOX        "Step 1: Define Crank Wheel....",IDC_STATIC,7,53,337,66
+    GROUPBOX        "Step 2: Set up Engine RPM...",IDC_STATIC,7,122,337,40
+    EDITTEXT        IDC_RPM,138,138,84,14,ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "Step 3: Set up WAV file...",IDC_STATIC,7,164,337,48
+    LTEXT           "Lower RPM",IDC_STATIC,137,128,54,8
+    COMBOBOX        IDC_COMBO_SAMPLERATE,88,188,83,116,CBS_DROPDOWN | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Sample Rate",IDC_STATIC,96,176,42,8
+    GROUPBOX        "Step 4: Generate WAV...",IDC_STATIC,7,214,337,42
+    PUSHBUTTON      "Generate WAV File",IDC_BUTTON1,137,230,76,14
+    EDITTEXT        IDC_TIME,201,188,84,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Run Time(sec)",IDC_STATIC,206,176,47,8
+    GROUPBOX        "Step 5: Play WAV...",IDC_STATIC,7,257,337,42
+    PUSHBUTTON      "Play WAV File Once",IDC_PLAYONCE,21,272,76,14
+    PUSHBUTTON      "Play WAV File in LOOP",IDC_PLAYLOOP,138,272,76,14
+    PUSHBUTTON      "Stop Playing WAV File",IDC_STOPLOOP,247,272,76,14
+    LTEXT           "Crankshaft Timing Wheel Signal Simulator (C) Bowling && Grippo",
+                    IDC_STATIC,66,9,198,8
+    LTEXT           "see: http://www.megasquirt.info/router/crankwheelpulser.htm",
+                    IDC_STATIC,70,36,207,8
+    LTEXT           "For MegaSquirt or any other ECU utilizing crank wheel triggering",
+                    IDC_STATIC,65,18,201,8
+    GROUPBOX        "",IDC_STATIC,7,301,337,42
+    COMBOBOX        IDC_COMBO_CAM,245,66,87,49,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Cam Sync Select",IDC_STATIC,185,69,55,8
+    EDITTEXT        IDC_CAM,245,90,86,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Cam Trigger (Degrees)",IDC_STATIC,173,94,72,8
+    EDITTEXT        IDC_RPM2,239,138,84,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Upper RPM",IDC_STATIC,238,127,37,8
+    CTEXT           "M Teeth",IDC_STATIC,57,65,36,9
+    EDITTEXT        IDC_MTEETH,58,73,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_NTEETH,113,73,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Set upper RPM=lower RPM for constant",IDC_STATIC,34,135,
+                    88,17
+    CTEXT           "N Teeth",IDC_STATIC,111,65,36,8
+    LTEXT           "with M-N (M>N) tooth configuration",IDC_STATIC,111,25,
+                    141,8
+    DEFPUSHBUTTON   "About",IDOK2,205,315,50,14
+    CTEXT           "Total teeth",IDC_STATIC,53,87,47,11
+    CTEXT           "Missing teeth",IDC_STATIC,105,87,51,11
+    CTEXT           "(incl.missing)",IDC_STATIC,52,95,51,11
+    CTEXT           "---",IDC_STATIC,93,73,15,11
+    CTEXT           "M-N teeth:",IDC_STATIC,15,76,36,8
+    CONTROL         "VR",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,61,105,26,10
+    CONTROL         "Hall",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,119,105,28,
+                    10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "CrankWheelPulser MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "CrankWheelPulser"
+            VALUE "LegalCopyright", "Copyright (C) 2005"
+            VALUE "OriginalFilename", "CrankWheelPulser.EXE"
+            VALUE "ProductName", "CrankWheelPulser Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 162
+    END
+
+    IDD_CRANKWHEELPULSER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 344
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 343
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About CrankWheelPulser..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\CrankWheelPulser.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
